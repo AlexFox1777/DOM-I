@@ -39,4 +39,48 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+document.querySelector('#nav-item-1').textContent = siteContent['nav']['nav-item-1'];
+document.getElementById('nav-item-2').textContent = siteContent['nav']['nav-item-2'];
+document.getElementById('nav-item-3').textContent = siteContent['nav']['nav-item-3'];
+document.getElementById('nav-item-4').textContent = siteContent['nav']['nav-item-4'];
+document.getElementById('nav-item-5').textContent = siteContent['nav']['nav-item-5'];
+document.getElementById('nav-item-6').textContent = siteContent['nav']['nav-item-6'];
+const allLinks = document.querySelectorAll('header nav a');
+allLinks.forEach(item => item.style.color='green');
+const nav = document.querySelector('header nav');
+nav.appendChild();
+
+document.querySelector('.cta-text h1').textContent = siteContent['cta']['h1'];
+document.querySelector('.cta-text button').textContent = siteContent['cta']['button'];
+document.querySelector('#cta-img').setAttribute('src', siteContent['cta']['img-src']);
+
+document.querySelector('.top-content .text-content #features-h4').textContent = siteContent['main-content']['features-h4'];
+document.querySelector('.top-content .text-content #features-content').textContent = siteContent['main-content']['features-content'];
+document.querySelector('.top-content .text-content #about-h4').textContent = siteContent['main-content']['about-h4'];
+document.querySelector('.top-content .text-content #about-content').textContent = siteContent['main-content']['about-content'];
+
+document.querySelector('#middle-img').setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+document.querySelector('.bottom-content .text-content #services-h4').textContent = siteContent['main-content']['services-h4'];
+document.querySelector('.bottom-content .text-content #services-content').textContent = siteContent['main-content']['services-content'];
+document.querySelector('.bottom-content .text-content #product-h4').textContent = siteContent['main-content']['product-h4'];
+document.querySelector('.bottom-content .text-content #product-content').textContent = siteContent['main-content']['product-content'];
+document.querySelector('.bottom-content .text-content #vision-h4').textContent = siteContent['main-content']['vision-h4'];
+document.querySelector('.bottom-content .text-content #vision-content').textContent = siteContent['main-content']['vision-content'];
+
+document.querySelector('.contact #contact-h4').textContent = siteContent['contact']['contact-h4'];
+document.querySelector('.contact #address').textContent = siteContent['contact']['address'];
+document.querySelector('.contact #phone').textContent = siteContent['contact']['phone'];
+document.querySelector('.contact #email').textContent = siteContent['contact']['email'];
+
+
+document.querySelector('footer p').textContent = siteContent['footer']['copyright'];
+
+
+
+
+
+
+
