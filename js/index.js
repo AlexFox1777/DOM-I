@@ -61,7 +61,7 @@ firstLink.style.color ='green';
 nav.appendChild(lastLink);
 nav.prepend(firstLink);
 
-// ================CTA===============
+// ================CTA-TEXT===============
 
 const cta = document.querySelector('.cta-text h1');
 cta.textContent = siteContent['cta']['h1'];
