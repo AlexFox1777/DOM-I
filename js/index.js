@@ -41,18 +41,32 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
-document.querySelector('#nav-item-1').textContent = siteContent['nav']['nav-item-1'];
-document.getElementById('nav-item-2').textContent = siteContent['nav']['nav-item-2'];
-document.getElementById('nav-item-3').textContent = siteContent['nav']['nav-item-3'];
-document.getElementById('nav-item-4').textContent = siteContent['nav']['nav-item-4'];
-document.getElementById('nav-item-5').textContent = siteContent['nav']['nav-item-5'];
-document.getElementById('nav-item-6').textContent = siteContent['nav']['nav-item-6'];
-const allLinks = document.querySelectorAll('header nav a');
-allLinks.forEach(item => item.style.color='green');
-const nav = document.querySelector('header nav');
-nav.appendChild();
+// ================NAV===============
 
-document.querySelector('.cta-text h1').textContent = siteContent['cta']['h1'];
+const allLinks = document.querySelectorAll('header nav a');
+allLinks.forEach( (item, i) => item.textContent = siteContent['nav'][`nav-item-${i+1}`]);
+allLinks.forEach(item => item.style.color='green');
+
+// ================ADDITIONAL LINKS===============
+
+const nav = document.querySelector('nav');
+let lastLink = document.createElement('a');
+let firstLink = document.createElement('a');
+lastLink.textContent = 'LastItem';
+firstLink.textContent = 'FirstItem';
+lastLink.href = "#";
+firstLink.href = "#";
+lastLink.style.color = 'green';
+firstLink.style.color ='green';
+nav.appendChild(lastLink);
+nav.prepend(firstLink);
+
+// ================CTA===============
+
+const cta = document.querySelector('.cta-text h1');
+cta.textContent = siteContent['cta']['h1'];
+cta.style.whiteSpace = 'pre-line';
+
 document.querySelector('.cta-text button').textContent = siteContent['cta']['button'];
 document.querySelector('#cta-img').setAttribute('src', siteContent['cta']['img-src']);
 
